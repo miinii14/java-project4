@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class CustomList<T> {
+public class CustomList<T>{
     private class Node {
         T value;
         Node next;
@@ -49,6 +49,28 @@ public class CustomList<T> {
             head = head.next;
             return temp;
         }
+    }
+
+    public T removeLast(){
+        if (head == null) {
+            throw new NoSuchElementException();
+        }
+        else if(head == tail){
+            T temp = head.value;
+            head = null;
+            tail = null;
+        }
+        else{
+            Node temp = head;
+            while(temp.next != tail){
+                temp = temp.next;
+            }
+            T temp2 = tail.value;
+            tail = temp;
+            tail.next = null;
+            return temp2;
+        }
+        return null;
     }
 
 

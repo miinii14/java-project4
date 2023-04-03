@@ -4,9 +4,8 @@ public class Main {
         list.addLast("abc");
         list.addLast("cdf");
         list.addLast("def");
-        System.out.println(list.getFirst());
-        list.removeFirst();
-        System.out.println(list.getFirst());
+        System.out.println(list.getLast());
+        list.removeLast();
         System.out.println(list.getLast());
     }
 }
